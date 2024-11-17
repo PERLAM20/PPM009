@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Deportiva para Mujeres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <h1>Tienda Ropa Deportiva</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#shop">Tienda</a></li>
+                    <li><a href="#about">Sobre nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Bienvenida -->
+    <section id="home" class="welcome">
+        <div class="container">
+            <h2>Bienvenida a la mejor tienda de ropa deportiva para mujeres</h2>
+            <p>Encuentra tus prendas favoritas para tus entrenamientos o tu día a día. ¡Viste con estilo y comodidad!</p>
+        </div>
+    </section>
+
+    <!-- Sección Tienda de Productos -->
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2>Productos</h2>
+            <div class="filters">
+                <button onclick="filterProducts('leggings')">Leggings</button>
+                <button onclick="filterProducts('tops')">Tops</button>
+                <button onclick="filterProducts('abrigos')">Abrigos</button>
+                <button onclick="filterProducts('oversize')">Poloshirts Oversize</button>
+            </div>
+
+            <div class="product-grid">
+                <div class="product" data-category="leggings">
+                    <img src="images/leggings.jpg" alt="Leggings Deportivo">
+                    <h3>Leggings Deportivo</h3>
+                    <p>Comodidad y estilo en cada movimiento.</p>
+                    <span>$25.99</span>
+                    <button onclick="addToCart('Leggings Deportivo', 25.99)">Agregar al carrito</button>
+                </div>
+
+                <div class="product" data-category="tops">
+                    <img src="images/top.jpg" alt="Top Deportivo">
+                    <h3>Top Deportivo</h3>
+                    <p>Diseño ajustado para mayor confort.</p>
+                    <span>$19.99</span>
+                    <button onclick="addToCart('Top Deportivo', 19.99)">Agregar al carrito</button>
+                </div>
+
+                <div class="product" data-category="abrigos">
+                    <img src="images/abrigo.jpg" alt="Abrigo Deportivo">
+                    <h3>Abrigo Deportivo</h3>
+                    <p>Perfecto para mantenerte caliente después del entrenamiento.</p>
+                    <span>$45.99</span>
+                    <button onclick="addToCart('Abrigo Deportivo', 45.99)">Agregar al carrito</button>
+                </div>
+
+                <div class="product" data-category="oversize">
+                    <img src="images/oversize.jpg" alt="Poloshirt Oversize">
+                    <h3>Poloshirt Oversize</h3>
+                    <p>Comodidad y estilo para el día a día.</p>
+                    <span>$30.99</span>
+                    <button onclick="addToCart('Poloshirt Oversize', 30.99)">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <section id="cart" class="cart">
+        <div class="container">
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <h3>Total: $<span id="total">0</span></h3>
+            <button onclick="checkout()">Realizar Pedido</button>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tienda Ropa Deportiva. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
